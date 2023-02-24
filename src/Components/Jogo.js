@@ -1,22 +1,23 @@
-import { useState } from "react"
 import palavras from "../palavras"
 import errou from "./errou";
 
-export default function Jogo(){    
+export default function Jogo({escondida, setEscondida, ativadas, setAtivadas, soletra, setSoletra}){    
     let imagem = errou()
-    const[escondida , setEscondida] = useState() 
     
     function addPalavra(){
-        let  letra = []
         let tamanho = palavras.length
         let palavra_sorteada = palavras[(Math.random()*tamanho).toFixed(0)]
          
         for(let i=0;i<palavra_sorteada.length;i++){
-            letra[i] = palavra_sorteada[i];
+            soletra[i] = palavra_sorteada[i];
         }
-        console.log(letra)
-        let escondida = letra.map((l)=>" _ ")
+        console.log(soletra)
+        setSoletra(soletra)
+        
+        let escondida = soletra.map((l)=>" _ ")
         setEscondida(escondida)
+
+        setAtivadas([])
 
 }
 
@@ -30,7 +31,7 @@ export default function Jogo(){
             </div>
             <div className="direita">
                 <button onClick={addPalavra} className="buttonEscolherPalavra">Escolher palavra</button>
-                <div class="escondida">{escondida}</div>
+                <div className="escondida">{escondida}</div>
             </div>
         </div>
     );
