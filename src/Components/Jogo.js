@@ -3,7 +3,7 @@ import palavras from "../palavras"
 
 export default function Jogo({escondida, setEscondida, ativadas, setAtivadas, soletra, setSoletra, ganhou, setGanhou, perdeu, setPerdeu, imagem, erros, setErros}){    
     
-    console.log(ativadas)
+
     function addPalavra(){
 
         setGanhou("")
