@@ -1,18 +1,18 @@
+import alfabeto from "../alfabeto"
 import palavras from "../palavras"
 
-export default function Jogo({escondida, setEscondida, setAtivadas, soletra, setSoletra, ganhou, setGanhou, perdeu, setPerdeu, imagem, erros, setErros}){    
+export default function Jogo({escondida, setEscondida, ativadas, setAtivadas, soletra, setSoletra, ganhou, setGanhou, perdeu, setPerdeu, imagem, erros, setErros}){    
     
+    console.log(ativadas)
     function addPalavra(){
-
-        //if(ganhou="ganhou" || perdeu="perdeu" ||)
-        //let tamanho = palavras.length
 
         setGanhou("")
         setPerdeu("")
         setErros(0)
 
-        let batata = palavras.indexOf("lua")
-        let palavra_sorteada = palavras[batata]//(Math.random()*tamanho).toFixed(0)
+        //let batata = palavras.indexOf("lua")
+        let tamanho = palavras.length
+        let palavra_sorteada = palavras[(Math.random()*tamanho).toFixed(0)]
 
          
         for(let i=0;i<palavra_sorteada.length;i++){

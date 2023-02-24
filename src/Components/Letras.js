@@ -37,6 +37,7 @@ export default function Letras({ativadas, setAtivadas, soletra, escondida, setEs
         <div className="letras">
             {alfabeto.map((letra) => 
                 <button data-test="letter"
+                    disabled={ativadas.includes(letra)}
                     key={letra}
                     onClick={() => clicouLetra(letra, erros)} 
                     className={`buttonLetra
