@@ -1,0 +1,99 @@
+body{
+    background-color: rgba(0, 0, 0, 0.405);
+}
+
+
+.letras{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 676px;
+    height: 91px;
+    flex-wrap: wrap;
+}
+
+.App{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Jogo{
+    width: 926px;
+    height: 466px;
+    margin-top: 59px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.forca, .esquerda{
+    width: 400px;
+    height: 466px;
+}
+
+.direita{
+    width: 526px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 27px;
+    margin-top: 30px;
+}
+
+.direita button{
+
+    color:white;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    width: 200px;
+    height: 60px;
+    background: #27AE60;
+    border-radius: 8px;
+}
+
+.letras button{
+    width: 40px;
+    height: 40px;
+    margin-left: 12px;
+    margin-bottom: 11px;
+}
+
+.disabilitada{
+    color: #798A9F;
+    background: #9FAAB5;
+    border: 1px solid #7AA7C7;
+    border-radius: 3px;
+}
+
+.habilitada{
+    color: #798A9F;
+    background: #9FAAB5;
+    border: 1px solid #7AA7C7;
+    border-radius: 3px;
+}
+
+.escondida{
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 68px;
+}
+
+.ganhou{
+    color: #27AE60;
+}
+
+.perdeu{
+    color: #FF0000;
+}
