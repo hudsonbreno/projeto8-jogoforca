@@ -1,6 +1,6 @@
 import palavras from "../palavras"
 
-export default function Jogo({escondida, setEscondida, ativadas, setAtivadas, soletra, setSoletra, ganhou, setGanhou, perdeu, setPerdeu, imagem, erros, setErros}){    
+export default function Jogo({escondida, setEscondida, setAtivadas, setSoletra, ganhou, setGanhou, perdeu, setPerdeu, imagem, erros, setErros}){    
     
 
     function addPalavra(){
@@ -11,8 +11,10 @@ export default function Jogo({escondida, setEscondida, ativadas, setAtivadas, so
 
         //let batata = palavras.indexOf("lua")
         let tamanho = palavras.length
-        let palavra_sorteada = palavras[parseInt(Math.random() * (tamanho - 1))]
-         
+        let palavra_sorteada = palavras[(Math.random()*tamanho).toFixed(0)]
+        
+        let soletra = []
+
         for(let i=0;i<palavra_sorteada.length;i++){
             soletra[i] = palavra_sorteada[i];
         }

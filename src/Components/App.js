@@ -1,5 +1,6 @@
 import Jogo from "./Jogo.js"
 import Letras from "./Letras.js"
+import Chute from "./Chute.js"
 import alfabeto from "../alfabeto"
 import { useState } from "react"
 import forca0 from "../assets/forca0.png"
@@ -16,9 +17,12 @@ function App() {
   const[ativadas, setAtivadas] = useState(alfabeto)
   const[escondida , setEscondida] = useState()
   const[soletra, setSoletra] = useState([])
+
   const[ganhou, setGanhou] = useState("")
   const[perdeu, setPerdeu] = useState("")
   const[erros, setErros] = useState(0)
+
+  const[valor, setValor] = useState("")
 
   return (
     <div className="App">
@@ -38,6 +42,12 @@ function App() {
       perdeu={perdeu} setPerdeu={setPerdeu}
       erros={erros} setErros={setErros}/>
     
+      <Chute soletra={soletra}
+      ganhou={ganhou} setGanhou={setGanhou}
+      perdeu={perdeu} setPerdeu={setPerdeu}
+      erros={erros} setErros={setErros}
+      valor={valor} setValor={setValor}
+      />
     </div>
   );
 }
