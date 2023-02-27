@@ -15,7 +15,8 @@ export default function Letras({ativadas, setAtivadas, soletra, escondida, setEs
                     }
                     
                     if(JSON.stringify(escondida) === JSON.stringify(soletra)){
-                        setGanhou("Ganhou")
+                        ganhou = "Ganhou"
+                        setGanhou(ganhou)
                         setAtivadas(alfabeto)
                     }
                 }
@@ -23,8 +24,9 @@ export default function Letras({ativadas, setAtivadas, soletra, escondida, setEs
                     erros = erros+1
                     setErros(erros)
                     if(erros > 5){
+                        perdeu = "Perdeu"
                         setEscondida(soletra)
-                        setPerdeu("Perdeu")
+                        setPerdeu(perdeu)
                         setAtivadas(alfabeto)
                     }
                 }
@@ -39,7 +41,7 @@ export default function Letras({ativadas, setAtivadas, soletra, escondida, setEs
                     key={letra}
                     onClick={() => clicouLetra(letra, erros)} 
                     className={`buttonLetra
-                    ${ativadas.includes(letra)?  "habilitada" : "desabilitada"}
+                    ${ativadas.includes(letra)?  "habilitada" : ""}
                     `}>{letra}
                 </button>)}
         </div>
