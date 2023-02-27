@@ -41,7 +41,7 @@ export default function Letras({ativadas, setAtivadas, soletra, escondida, setEs
                     key={letra}
                     onClick={() => clicouLetra(letra, erros)} 
                     className={`buttonLetra
-                    ${ativadas.includes(letra)?  "habilitada" : ""}
+                    ${ativadas.includes(letra)?  "habilitada" : "disabilitada"}
                     `}>{letra}
                 </button>)}
         </div>
